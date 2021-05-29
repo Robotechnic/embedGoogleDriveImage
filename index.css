@@ -1,0 +1,210 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-family: 'Product Sans',Arial,sans-serif;
+	min-height: 100vh;
+}
+
+:root {
+	--header-background: #2e3d50;
+	--footer-background: #282923;
+	--title-color: #34395f;
+	--input-focus-border:#4160D6;
+	--copy-button-background: #ea4335;
+	--copy-button-background-hover: #ef766b;
+	--copyed-button-background: #34a853;
+	--copyed-button-background-hover: #60C079;
+}
+
+header {
+	width: 100%;
+	color:  white;
+	background-color: var(--header-background);
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	box-sizing: border-box;
+
+}
+
+footer {
+	color: white;
+	background-color: var(--footer-background);
+	display: flex;
+	justify-content: center;
+	margin-top: clamp(0px,100%,25vh);
+}
+
+.footer__description {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+label, h2, h3 {
+	color: var(--title-color);
+}
+
+section {
+	padding-left: clamp(5px,15%,300px);
+	padding-right: clamp(5px,15%,300px);
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+section h2{
+	width: 100%;
+	text-align: center;
+}
+
+
+.blueSection {
+	color: white;
+	background: #4285f4;
+}
+
+.blueSection form {
+	display: flex;
+	justify-content: center;
+}
+
+.urlInput input[type="submit"]{
+	background-color: grey;
+	border: 1px solid grey;
+	color: white;
+	transition: background .5s, border .5s;
+}
+
+.urlInput input[type="submit"]:hover {
+	background-color: lightgray;
+	border: 1px solid lightgray;
+	border-left: none;
+}
+
+#baseUrl {
+	width: 100%;
+}
+
+
+.copyButton {
+	background: var(--copy-button-background);
+	border: 1px solid var(--copy-button-background);
+	color: white;
+	transition: background .5s, border .5s;
+}
+
+.copyButton:hover {
+	background-color: var(--copy-button-background-hover);
+	border: 1px solid var(--copy-button-background-hover);
+	border-left: none;
+}
+
+.copyButton.copied {
+	background-color: var(--copyed-button-background);
+	border: 1px solid var(--copyed-button-background);
+	border-left: none;
+}
+
+.copyButton.copied:hover{
+	background-color: var(--copyed-button-background-hover);
+	border: 1px solid var(--copyed-button-background-hover);
+	border-left: none;
+}
+
+.result {
+	display: grid;
+	grid-template-columns: 20fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas: "label label"
+						 "input button";
+
+	margin-top: 20px;
+}
+
+.result label {
+	grid-area: label;
+}
+
+.result input, .urlInput input {
+	grid-area: input;
+	border: 1px solid #e0e0e0;
+	border-right: none;
+	border-radius: 0;
+
+	border-radius: 5px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 3px;
+
+	transition: border .5s;
+}
+
+.result input:focus, .urlInput input:focus{
+	border: solid var(--input-focus-border) 1px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: none;
+	outline: none;
+}
+
+.result input:focus-visible, .urlInput input:focus-visible {
+	border: solid var(--input-focus-border) 1px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: none;
+	outline: none;
+}
+
+.result button,  .urlInput input[type="submit"]{
+	grid-area: button;
+	border: none;
+	border-left: none;
+	cursor: pointer;
+
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding: 3px;
+}
+
+
+input, button {
+	font-size: clamp(14px, 3vw, 25px);
+}
+
+
+.git-hub-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 10px 5px 5px;
+	border: 2px solid white;
+	border-radius: 40px;
+	letter-spacing: .1em;
+	fill: white;
+	transition: .5s;
+	font-family: Arial;
+	color:white;
+	text-decoration: none;
+	width: max-content;
+	align-self:center;
+	margin: 1em;
+}
+
+.git-hub-link * + * {
+	margin-left: 5px;
+}
+
+.git-hub-link:hover {
+	fill: black;
+	color: black;
+	background: white;
+}
+
+
+.git-hub-logo {
+	display: block;
+	position: relative;
+	top: -.5px;
+}
