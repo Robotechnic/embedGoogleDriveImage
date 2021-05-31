@@ -15,6 +15,7 @@ body {
 	--copy-button-background-hover: #ef766b;
 	--copyed-button-background: #34a853;
 	--copyed-button-background-hover: #60C079;
+	--input-border: #B0B0B0;
 }
 
 header {
@@ -69,14 +70,14 @@ section h2{
 	justify-content: center;
 }
 
-.urlInput input[type="submit"]{
+#urlInput input[type="submit"]{
 	background-color: grey;
 	border: 1px solid grey;
 	color: white;
 	transition: background .5s, border .5s;
 }
 
-.urlInput input[type="submit"]:hover {
+#urlInput input[type="submit"]:hover {
 	background-color: lightgray;
 	border: 1px solid lightgray;
 	border-left: none;
@@ -126,9 +127,9 @@ section h2{
 	grid-area: label;
 }
 
-.result input, .urlInput input {
+.result input, #urlInput input {
 	grid-area: input;
-	border: 1px solid #e0e0e0;
+	border: 1px solid var(--input-border);
 	border-right: none;
 	border-radius: 0;
 
@@ -140,7 +141,7 @@ section h2{
 	transition: border .5s;
 }
 
-.result input:focus, .urlInput input:focus{
+.result input:focus, #urlInput input:focus{
 	border: solid var(--input-focus-border) 1px;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
@@ -148,7 +149,7 @@ section h2{
 	outline: none;
 }
 
-.result input:focus-visible, .urlInput input:focus-visible {
+.result input:focus-visible, #urlInput input:focus-visible {
 	border: solid var(--input-focus-border) 1px;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
@@ -156,7 +157,7 @@ section h2{
 	outline: none;
 }
 
-.result button,  .urlInput input[type="submit"]{
+.result button,  #urlInput input[type="submit"]{
 	grid-area: button;
 	border: none;
 	border-left: none;
