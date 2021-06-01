@@ -19,27 +19,67 @@
 			<input type="submit" name="Valider" value="Valider">
 		</form>
 	</section>
+
+	<nav class="dialog" id="waitDialog">
+		<div class="dialog__content">
+			<h2>Traitement de l'image en cour...</h2>
+			<img src="./loading.svg">
+		</div>
+	</nav>
+
+	<nav class="dialog" id="errorDialog">
+		<div class="dialog__content">
+			<h2>Votre lien n'est pas valide</h2>
+			<p class="dialog__content__error"></p>
+			<button class="dialog__button">Ok</button>
+		</div>
+	</nav>
+
 	<section>
 		<h2>Résultat:</h2>
 		<div class="result">
 			<label for="embedUrl">Url a intégrer:</label>
-			<input type="url" name="embedUrl" id="embedUrl">
-			<button class="copyButton">Copier</button>
+			<input type="url" name="embedUrl" id="embedUrl" readonly>
+			<button class="copyButton">
+				<div class="copyButton__text">Copier</div>
+				<svg x="0px" y="0px"
+				   viewBox="0 0 25 30" class="copiedIcon">
+					<path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+				</svg>
+			</button>
 		</div>
 		<div class="result">
 			<label for="embedImage">Image html:</label>
-			<input type="text" name="embedImage" id="embedImage">
-			<button class="copyButton">Copier</button>
+			<input type="text" name="embedImage" id="embedImage" readonly>
+			<button class="copyButton">
+				<div class="copyButton__text">Copier</div>
+				<svg x="0px" y="0px"
+				   viewBox="0 0 25 30" class="copiedIcon">
+					<path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+				</svg>
+			</button>
 		</div>
 		<div class="result">
 			<label for="embedImageWithLink">Image html avec un lien clicable:</label>
-			<input type="text" name="embedImageWithLink" id="embedImageWithLink">
-			<button class="copyButton">Copier</button>
+			<input type="text" name="embedImageWithLink" id="embedImageWithLink" readonly>
+			<button class="copyButton">
+				<div class="copyButton__text">Copier</div>
+				<svg x="0px" y="0px"
+				   viewBox="0 0 25 30" class="copiedIcon">
+					<path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+				</svg>
+			</button>
 		</div>
 		<div class="result">
 			<label for="embedMarkdown">Image markdown:</label>
-			<input type="text" name="embedMarkdown" id="embedMarkdown">
-			<button class="copyButton">Copier</button>
+			<input type="text" name="embedMarkdown" id="embedMarkdown" readonly>
+			<button class="copyButton">
+				<div class="copyButton__text">Copier</div>
+				<svg x="0px" y="0px"
+				   viewBox="0 0 25 30" class="copiedIcon">
+					<path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+				</svg>
+			</button>
 		</div>
 		
 	</section>
